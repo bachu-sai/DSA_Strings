@@ -1,0 +1,14 @@
+#python
+
+def prg(s1,s2):
+    temp=''
+    if(len(s1)!=len(s2)):
+        return 0
+    s1=s1+s1
+    if(s1.count(s2)>0):
+        return 1
+    else:
+        return 0
+s1=input()
+s2=input()
+print(prg(s1,s2))
