@@ -1,0 +1,38 @@
+#Java
+
+class Solution {
+    int isPlaindrome(String S) {
+        // code here
+        int l=0;
+        int r=S.length()-1;
+        int f=0;
+        while(l<r)
+        {
+            if(S.charAt(l)!=S.charAt(r))
+            {
+              f=1;
+              break;
+            }
+            l++;
+            r--;
+              
+        }
+    if(f==1)
+    return 0;
+    else
+    return 1;
+    }
+}
+
+------------------------------------------------
+
+#Python
+
+
+class Solution:
+	def isPlaindrome(self, S):
+		# code here
+		if(S==S[::-1]):
+		    return 1
+		else:
+		    return 0
