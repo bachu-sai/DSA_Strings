@@ -1,0 +1,16 @@
+#python
+
+
+no_of_chars=256
+s=input()
+c=[0]*no_of_chars
+for i in s:
+    c[ord(i)]+=1
+j=0
+for k in c:
+    if(k>1):
+        print(chr(j)+" nof times "+str(k))
+    j+=1
+
+
+---------------------------------------------------------------
