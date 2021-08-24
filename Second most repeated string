@@ -1,0 +1,27 @@
+#python
+
+
+def secFrequent(self, arr, n):
+        # code here
+        maxi=-1
+        ma_s=-1
+        
+        d={}
+        for i in arr:
+            if(i not in d):
+                d[i]=1
+            else:
+                d[i]+=1
+                
+        for k in d.keys():
+            if(d[k]>maxi):
+                ma_s=maxi
+                maxi=d[k]
+            elif(d[k]>ma_s and d[k]!=maxi):
+                ma_s=d[k]
+                
+                
+        
+        for it in d:
+            if(d[it]==ma_s):
+                return it
