@@ -1,0 +1,19 @@
+#python
+
+def lcs(m,n,k1,k2):
+    dp=[[0 for x in range(k2+1)] for x in range(k1+1)]
+    for i in range(k1+1):
+        for j in range(k2+1):
+            if i == 0 or j == 0:
+                dp[i][j] = 0
+            elif m[i-1] == n[j-1]:
+                dp[i][j] = dp[i-1][j-1] + 1
+            else:
+                dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+    return dp[k1][k2]
+
+m=input()
+n=input()
+k1=len(m)
+k2=len(n)
+print(lcs(m,n,k1,k2))
