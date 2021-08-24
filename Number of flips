@@ -1,0 +1,20 @@
+
+#python
+
+
+
+
+n=input()
+c1=0
+c2=0
+for i in range(len(n)):
+    if(i%2==0 and n[i]=='1'):
+        c1=c1+1
+    elif(i%2!=0 and n[i]=='0'):
+        c1=c1+1
+    elif(i%2==0 and n[i]=='0'):
+        c2=c2+1
+    elif(i%2!=0 and n[i]=='1'):
+        c2=c2+1
+print(min(c1,c2))
+        
