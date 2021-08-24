@@ -1,0 +1,27 @@
+n=input()
+l=list(n)
+z=[]
+print(l)
+for i in l:
+    z.append(int(i))
+print(z)
+n=len(z)
+for i in range(n-1,0,-1):
+    if(z[i]>z[i-1]):
+        break
+if(i==0):
+    print('not possy')
+x=z[i-1]
+s=i
+for j in range(i+1,n):
+    if(z[j]>x and z[j]<z[s]):
+        s=j
+z[i-1],z[s]=z[s],z[i-1]
+h=0
+for j in range(i):
+         h= h * 10 + z[j]
+z = sorted(z[i:])
+for j in range(n-i):
+    h = h * 10 + z[j]
+print(h)
+         
