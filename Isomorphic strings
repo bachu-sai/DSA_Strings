@@ -1,0 +1,20 @@
+#python
+
+
+def iso(n1,n2):
+    c1=[0]*256
+    c2=[0]*256
+    if(len(n1)!=len(n2)):
+        return 0
+    else:
+        for i in range(len(n1)):
+            c1[ord(n1[i])]+=1
+            c2[ord(n2[i])]+=1
+            if(c1[ord(n1[i])]!=c2[ord(n2[i])]):
+                return 0
+        return 1
+        
+n1=input()
+n2=input()
+print(iso(n1,n2))
+        
